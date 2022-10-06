@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: #e9e2d9;
         font-family: "IBM Plex Mono",monospace;
     }
     html {
@@ -13,5 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         background-color: #0a0a0a;
+    }
+    section {
+        width: 100%;
     }
 `

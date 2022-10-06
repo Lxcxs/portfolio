@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-    margin-bottom: 5em;
-    width: 100%;
-    height: 100%;
+export const Container = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

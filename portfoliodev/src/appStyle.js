@@ -9,4 +9,14 @@ export const Container = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+    a {
+        color: white;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        margin: 0;
+        padding:0 2em 5em 2em;
+    }
 `

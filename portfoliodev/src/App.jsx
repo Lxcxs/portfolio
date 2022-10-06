@@ -1,5 +1,4 @@
 import Menu from "./Pages/Menu/index.jsx"
-import Header from "./Pages/Welcome/Header.jsx"
 import Home from './Pages/Home/index.jsx'
 import { Container } from './appStyle.js'
 import Skills from "./Pages/Skills/index.jsx"
@@ -11,7 +10,6 @@ function App() {
     <>
     <Container>
       <Menu />
-      <Header />
       <Home />
       <Skills />
       <Projects />

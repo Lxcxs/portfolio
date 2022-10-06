@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    opacity: 0.5;
+    opacity: 1;
     position: fixed;
     left: 0;
     top: 0;
@@ -15,6 +15,7 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: column;
     transition: all .5s;
+    animation: shadoweffect 1.5s infinite both;
     
     div#pf, nav {
         transform: scale(.98);
@@ -50,6 +51,24 @@ export const Container = styled.section`
         }
     }
 
+    @media (max-width: 1200px) {
+        top: 5em;
+        height: auto;
+        opacity: 1;
+        width: auto;
+        padding: .5em;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        border-right: 3px solid #80808073;
+        border-top: 3px solid #80808073;
+        border-bottom: 3px solid #80808073;
+        animation: none;
+
+        &:hover {
+            animation: none;
+        }
+    }
+
 `
 
 export const Profile = styled.div`
@@ -65,9 +84,6 @@ export const Profile = styled.div`
     box-shadow:
         0px 4.8px 6.6px -12px rgba(0, 0, 0, 0.5),
         0px 38px 53px -12px rgba(0, 0, 0, 1);
-        
-
-
     div {
         border-radius: 50%;
         background: linear-gradient(to top, #bd1550, #fcbe32);
@@ -81,26 +97,57 @@ export const Profile = styled.div`
         }
     }
 
-    h1 {
+    div.info-profile {
+        background: none;
+        border-radius: 0;
+        text-align: center;
+
+        h1 {
         font-family: "Bakbak One";
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 1vw;
-        padding: .1em 1em;
+        font-size: 1em;
         color: #db812c;
+        }
+        h3 {
+            text-align: center;
+            font-size: .9em;
+            color: darkgray;
+            display: block;
+        }
     }
-    h3 {
-        text-align: center;
-        font-size: .9em;
-        color: darkgray;
-        display: block;
 
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        flex-direction: row;
+        margin-bottom: 0;
+
+        div {
+            border-radius: 50%;
+            background: linear-gradient(to top, #bd1550, #fcbe32);
+            margin-bottom: 0;
+
+            img {
+                width: 5em;
+                border: .2em solid transparent;
+            }
+        }
+
+        div.info-profile {
+            display: none;
+        }
     }
 `
 
 export const Navbar = styled.nav`
+    display: block;
     width: 100%;
-    height: 45px;
+    height: auto;
     margin-bottom: 1em;
     background-color: #00000081;
     padding: .7em 0;
@@ -124,7 +171,7 @@ export const Navbar = styled.nav`
                 transition: all .2s;
 
                 svg {
-                    margin-top: -4px;
+                    margin-top: 4px;
                     transition: all .2s;
                     &:hover {
                         transform: scale(1.10);
@@ -133,5 +180,9 @@ export const Navbar = styled.nav`
                 }
             }
         }
+    }
+
+    @media (max-width: 1200px) {
+        display: none;
     }
 `
