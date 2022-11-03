@@ -5,13 +5,17 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "IBM Plex Mono",monospace;
+        font-family: 'Kanit', sans-serif;
+        color: #dddddd;
     }
     html {
         scroll-behavior: smooth;
     }
     body {
-        background-color: #0a0a0a;
+        background-color: #101010;
+        opacity: 1;
+        background-size: 6px 6px;
+        background-image: repeating-linear-gradient(45deg, #1f1f1f 0, #1f1f1f 0.6000000000000001px, #101010 0, #101010 50%);
     }
     section {
         width: 100%;

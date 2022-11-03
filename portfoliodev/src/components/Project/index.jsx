@@ -1,4 +1,4 @@
-import { Call } from "../../components/Chamada/style.js";
+import { Call } from "../Call/style";
 import { Box, InfoBox, Container } from "./style";
 import { FaGithub } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ export default function Projects() {
 
                     <InfoBox>
                         <h5>FRONTEND MENTOR - FLEXBOX RESPONSIVE</h5>
-                        <h6>html | css</h6>
+                        <h6>html • css</h6>
 
                         <div>
                             <aside>
@@ -35,7 +35,7 @@ export default function Projects() {
 
                     <InfoBox>
                         <h5>FRONTEND MENTOR - FYLO DARK THEME</h5>
-                        <h6>html | css | sass</h6>
+                        <h6>html • css • sass</h6>
 
                         <div>
                             <aside>

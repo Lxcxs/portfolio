@@ -1,5 +1,5 @@
 import { Container } from "./style.js"
-import { Call } from "../../components/Chamada/style.js"
+import { Call } from "../Call/style"
 
 export default function Skills() {
     return (

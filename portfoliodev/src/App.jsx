@@ -1,18 +1,15 @@
-import Menu from "./Pages/Menu/index.jsx"
-import Home from './Pages/Home/index.jsx'
+import Menu from "./components/Menu/index.jsx"
+import Main from './Pages/Main/index.jsx'
 import { Container } from './appStyle.js'
-import Skills from "./Pages/Skills/index.jsx"
-import Projects from "./Pages/Project/index.jsx"
+import MenuMobile from "./components/MenuMobile/index.jsx";
 
 function App() {
-
   return (
     <>
+    <MenuMobile />
     <Container>
       <Menu />
-      <Home />
-      <Skills />
-      <Projects />
+      <Main />
     </Container>
 
     </>

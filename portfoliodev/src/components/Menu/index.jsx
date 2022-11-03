@@ -17,17 +17,17 @@ export default function Menu() {
                         <h3>Desenvolvedor Web (junior)</h3>
                     </div>
 
+                    <Navbar>
+                        <ul>
+                            <li><a href="https://www.instagram.com/_luquinsta/" target='_blank'><BsInstagram size={27}/></a></li>
+                            <li><a href="https://www.linkedin.com/in/lucas-cupertino-8b0637219/" target='_blank'><FaLinkedin size={27}/></a></li>
+                            <li><a href="https://github.com/Lxcxs" target='_blank'><FaGithub size={27}/></a></li>
+                            <li><a href="mailto:olucas.cdev@gmail.com" target='_blank'><FaPaperPlane size={27}/></a></li>
+                        </ul>
+                    </Navbar>
                 </Profile>
 
 
-                <Navbar>
-                    <ul>
-                        <li><a href="#"><BsInstagram size={32}/></a></li>
-                        <li><a href="#"><FaLinkedin size={32}/></a></li>
-                        <li><a href="#"><FaGithub size={32}/></a></li>
-                        <li><a href="#"><FaPaperPlane size={32}/></a></li>
-                    </ul>
-                </Navbar>
             </Container>
         </>
     )

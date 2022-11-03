@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const About = styled.div`
+    background: #1f1f1f;
+    padding: 1.4em;
+    border-radius: 1em;
+    box-shadow: 0 2px 3px black;
 
     h1 {
         padding-bottom: .5em;
-        color: #ee9e09;
     }
     p {
         font-size: 1.1vw;
@@ -52,7 +55,18 @@ export const Welcome = styled.header`
         text-align: center;
         font-weight: normal;
         padding: 1.5em 4em;
-        background: #1b1b1b;
+        background-color: #1f1f1f;
+        box-shadow: 0 2px 2px black;
         border-radius: 0.5em;
+    }
+    @media (max-width: 630px) {
+        h1 {
+        font-size: 2.5em;
+    }
+
+        h4 {
+        font-size: .6em;
+
+    }
     }
 `

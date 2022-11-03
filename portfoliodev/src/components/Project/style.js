@@ -6,6 +6,10 @@ export const Container = styled.section`
     justify-content: center;
     gap: 3em;
     border-radius: 1em;
+
+    @media (max-width: 900px) {
+        gap: 1em;
+    }
 `
 
 export const Box = styled.div`
@@ -13,12 +17,23 @@ export const Box = styled.div`
     height: 18em;
     border-radius: .5em;
     overflow: hidden;
-    background-color: #ffffff11;
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 5px #000000a2;
+    border: 1px solid #00000098;
 
     div {
         img {
             width: 100%;
         }
+    }
+
+    @media (max-width: 850px) {
+        width: 18em;
+        height: auto;
+    }
+    @media (max-width: 650px) {
+        width: 100%;
+        height: auto;
     }
 `
 
@@ -29,7 +44,7 @@ export const InfoBox = styled.div`
     text-align: center;
 
     h5 {font-family: "Bakbak One"; font-weight: 100; letter-spacing: 1.2px;}
-    h6 {color: #858585; margin-bottom: .6em;}
+    h6 {color: #858585; margin-bottom: .6em; font-weight: 600;}
 
     div {
         display: flex;
@@ -61,7 +76,7 @@ export const InfoBox = styled.div`
         transition: all .2s;
         
         a {
-            cursor: default;
+            cursor: pointer;
             width: 100%;
             text-decoration: none;
             display: flex;
