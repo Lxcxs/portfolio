@@ -5,25 +5,36 @@ export const Container = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     gap: 3em;
+    padding: 2em 0;
     border-radius: 1em;
+    background: linear-gradient(145deg, #212121, #1c1c1c);
+    box-shadow: 0px 2px 5px black;
+    
 
     @media (max-width: 900px) {
         gap: 1em;
+        padding: 1em;
     }
 `
 
 export const Box = styled.div`
     width: 24em;
-    height: 18em;
+    height: auto;
+    padding: .5em;
     border-radius: .5em;
-    overflow: hidden;
-    background-color: #1f1f1f;
-    box-shadow: 0 2px 5px #000000a2;
-    border: 1px solid #00000098;
+
+    background-color: #101010;
+    opacity: 1;
+    background-size: 6px 6px;
+    background-image: repeating-linear-gradient(45deg, #1f1f1f 0, #1f1f1f 0.6000000000000001px, #101010 0, #101010 50%);
+    box-shadow: 0 2px 3px black;
+    border: 1px solid black;
 
     div {
         img {
             width: 100%;
+            border-radius: .5em;
+            box-shadow: 0px 2px 3px black;
         }
     }
 
@@ -40,7 +51,7 @@ export const Box = styled.div`
 export const InfoBox = styled.div`
     margin-top: -.3em;
     width: 100%;
-    padding: .5em;
+    padding: 1em 0 .2em 0;
     text-align: center;
 
     h5 {font-family: "Bakbak One"; font-weight: 100; letter-spacing: 1.2px;}
@@ -55,7 +66,7 @@ export const InfoBox = styled.div`
         align-items: stretch;
         align-content: stretch;
         justify-content: space-evenly;
-        background: #88888842;
+        background: #424242;
         gap: .3em;
 
     }

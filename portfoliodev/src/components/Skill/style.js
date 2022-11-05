@@ -6,10 +6,9 @@ export const Container = styled.div`
     flex-wrap: wrap;
     gap: 1em;
     padding: 2em;
-    border-radius: .8em;
-    background-color: #1f1f1f;
-    box-shadow: 0 2px 4px black;
-    border: 1px solid #00000041;
+    border-radius: 1em;
+    background: linear-gradient(145deg, #212121, #1c1c1c);
+    box-shadow: 0px 2px 5px black;
     
     div {
         flex-grow: 1;
@@ -25,8 +24,6 @@ export const Container = styled.div`
         border: 2px solid black;
         box-shadow: 0 3px 3px #000000b6;
         transition: all .2s;
-        background-color: #1f1f1f;
-        opacity: 1;
         background-size: 6px 6px;
         background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.6000000000000001px, #1f1f1f 0, #1f1f1f 50%);
 
