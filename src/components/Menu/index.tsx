@@ -20,7 +20,7 @@ function Menu({ toggleTheme }: ToggleThemeProps) {
   const [email, setEmail] = React.useState("Clique para copiar.");
   const target = document.getElementById('copy')
 
-  function handleEmail() {
+  function handleEmail({ target }) {
     target?.classList.add('active')
     console.log(target)
     setEmail('Email copiado!')

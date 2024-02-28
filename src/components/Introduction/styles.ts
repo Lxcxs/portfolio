@@ -10,6 +10,8 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2em;
+  text-shadow: 0 2px 2px #00000028;
+
 `;
 
 export const InfoText = styled.p`

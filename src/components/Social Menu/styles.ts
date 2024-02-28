@@ -29,7 +29,7 @@ export const Navbar = styled.nav`
     &:hover {
       color: ${props => props.theme.colors.primary};
       transition: .3s;
-      /* transform: translateX(10px); */
+      transform: translateX(5px);
     }
   }
 `

@@ -14,6 +14,8 @@ export const Title = styled.h1`
   font-size: 1.8em;
   font-weight: 900;
   color: ${(props) => props.theme.colors.primary};
+  text-shadow: 0 2px 2px #00000028;
+
 `;
 
 export const Navbar = styled.nav`
@@ -36,7 +38,7 @@ export const Navbar = styled.nav`
     &:hover {
       color: ${(props) => props.theme.colors.primary};
       transition: 0.3s;
-      /* transform: translateX(10px); */
+      transform: translateX(5px);
     }
   }
 `;
@@ -51,7 +53,9 @@ export const ButtonBox = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  a {text-decoration: none;}
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Button = styled.button`
@@ -71,6 +75,8 @@ export const Button = styled.button`
   font-weight: 500;
   position: relative;
   transform: translateY(-10px);
+  box-shadow: 0 2px 2px #0000003b;
+
   transition: 0.3s;
 
   &:hover,
@@ -84,6 +90,13 @@ export const Button = styled.button`
     background: ${(props) => props.theme.colors.secondary};
     border-color: ${(props) => props.theme.colors.secondary};
     color: ${(props) => props.theme.colors.primaryReverse};
+  }
+
+  &.active {
+    background-color: greenyellow;
+    border-color: greenyellow;
+    box-shadow: 0 2px 3px #0000003b;
+    color: black;
   }
 
   #copy {

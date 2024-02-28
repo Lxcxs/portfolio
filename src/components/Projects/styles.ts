@@ -14,6 +14,7 @@ export const Title = styled.h1`
   font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
+  text-shadow: 0 2px 2px #00000028;
   color: ${(props) => props.theme.colors.primary};
 `;
 
