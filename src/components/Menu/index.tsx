@@ -18,9 +18,8 @@ function Menu({ toggleTheme }: ToggleThemeProps) {
   const myEmail = 'olucas.cdev@gmail.com'
   const theme = React.useContext(ThemeContext);
   const [email, setEmail] = React.useState("Clique para copiar.");
-  const target = document.getElementById('copy')
 
-  function handleEmail({ target }) {
+  function handleEmail({ target }: any) {
     target?.classList.add('active')
     console.log(target)
     setEmail('Email copiado!')
