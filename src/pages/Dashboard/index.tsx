@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import dark from "../../themes/dark";
 import React from "react";
 import light from "../../themes/light";
+import LangProvider from "../../Context/useContext";
 
 function Dashboard() {
 
@@ -17,7 +18,7 @@ function Dashboard() {
     console.log(theme)
   }
 
-  return (
+  return (<LangProvider>
     <ThemeProvider theme={theme}>
       <Container>
         <Content>
@@ -28,6 +29,7 @@ function Dashboard() {
         </Content>
       </Container>
     </ThemeProvider>
+  </LangProvider>
   );
 }
 
