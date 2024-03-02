@@ -25,7 +25,22 @@ export const SkillContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  summary {
+  div.category {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 90%;
+      background-color: ${(props) => props.theme.colors.project};
+      position: absolute;
+      top: 1em;
+      left: 1px;
+    }
+  }
+
+  h1#title {
     cursor: pointer;
     color: ${(props) => props.theme.colors.primary};
     text-transform: uppercase;
@@ -50,7 +65,8 @@ export const SkillContent = styled.div`
 
     &:hover {
       transition: 0.3s;
-      transform: translateX(5px);
+      transform: translateX(2px);
+      color: ${(props) => props.theme.colors.linkHover};
     }
   }
 `;

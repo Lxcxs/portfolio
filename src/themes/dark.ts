@@ -4,10 +4,11 @@ export default {
   colors: {
     primary: "#e3e3e3",
     secondary: "#7B9BB1",
-    textColor: "#DDDDDD",
+    textColor: "#c4c4c4",
     primaryReverse: "#141414",
     project: "#d3d3d317",
     background: "linear-gradient(to top right, #00060B, #0F171E, #293540)",
-    mainstreetbg: "#0000001f"
+    mainstreetbg: "#0000001f",
+    linkHover: "#5afc1a"
   }
 }

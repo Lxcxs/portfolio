@@ -18,27 +18,27 @@ function Skills() {
       </InfoText>
 
       <SkillContent>
-        <details open>
-          <summary>Front-End</summary>
+        <div className="category">
+          <h1 id="title">Front-End</h1>
           <p><RiJavascriptFill size={26} />javascript</p>
           <p><BiLogoTypescript size={26} />typescript</p>
           <p><FaReact size={26} />react</p>
           <p><FaSass size={26} />sass.css</p>
           <p><SiStyledcomponents size={26} />styled-components</p>
-        </details>
-        <details open>
-          <summary>back-End</summary>
+        </div>
+        <div className="category">
+          <h1 id="title">back-End</h1>
           <p><FaPython size={26} />python</p>
           <p><FaNodeJs size={26} />node.js</p>
           <p><SiExpress size={26} />Express.js</p>
-        </details>
-        <details open>
-          <summary>Diversos</summary>
+        </div>
+        <div className="category">
+          <h1 id="title">Diversos</h1>
           <p><TbBrandVscode size={26} />VS Code</p>
           <p><TbBrandReactNative size={26} />React-Native</p>
           <p><SiMongodb size={26} />MongoDB</p>
           <p><FaGitSquare size={26} />Git</p>
-        </details>
+        </div>
       </SkillContent>
     </Container>
   );

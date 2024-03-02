@@ -29,20 +29,20 @@ export const ProjectContent = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; 
+  justify-content: space-around;
   gap: 4em;
   padding: 1em 0;
   position: relative;
   overflow: hidden;
 
   #mySwiper {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
   }
 `;
 
 export const Project = styled.div`
-margin: 0 auto;
+  margin: 0 auto;
   max-width: 500px;
   height: 300px;
   padding: 10px;
@@ -86,7 +86,7 @@ export const Subtitle = styled.div`
 export const SkillInfo = styled.div`
   width: 100%;
   p {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.primary};
     font-family: "Inter";
     font-style: italic;
     font-size: 14px;
@@ -112,7 +112,7 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: .2em;
+  gap: 0.2em;
 
   &:hover {
     background-color: ${(props) => props.theme.colors.project};

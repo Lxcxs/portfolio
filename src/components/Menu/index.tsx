@@ -1,11 +1,9 @@
 import React from "react";
-import { Button, ButtonBox, Container, Navbar, Title } from "./styles";
-// import { ThemeContext } from "styled-components";
-import { GrLanguage } from "react-icons/gr";
+import { Button, ButtonBox, Container, Navbar } from "./styles";
 import { ThemeContext } from "styled-components";
 import { MdDarkMode } from "react-icons/md";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaHome, FaInfoCircle  } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { AiFillProject } from "react-icons/ai";
 import { LangContext } from "../../Context/useContext";
@@ -41,7 +39,7 @@ function Menu({ toggleTheme }: MenuProps) {
   };
   return (
     <Container>
-      <Title>MENU</Title>
+      {/* <Title>MENU</Title> */}
       <Navbar>
         <a href="#inicio">
           <FaHome size={25} />
@@ -65,8 +63,9 @@ function Menu({ toggleTheme }: MenuProps) {
       </Navbar>
       <ButtonBox>
         <Button onClick={() => setLang(!lang)}>
-          {lang ? "Change Language" : "Mudar Linguagem"}
-          <GrLanguage />
+          {lang ? "Change: English " : "Mudar: Português"}
+          {/* <FaLanguage size={25} /> */}
+          
         </Button>
         <Button onClick={toggleTheme} id="toggleTheme">
           {lang ? (

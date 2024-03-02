@@ -27,7 +27,7 @@ export const Navbar = styled.nav`
     transition: .3s;
 
     &:hover {
-      color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.linkHover};
       transition: .3s;
       transform: translateX(5px);
     }

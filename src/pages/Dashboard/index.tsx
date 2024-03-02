@@ -11,7 +11,7 @@ import LangProvider from "../../Context/useContext";
 
 function Dashboard() {
 
-  const [theme, settheme] = React.useState(light);
+  const [theme, settheme] = React.useState(dark);
 
   const toggleTheme = () => {
     settheme(theme.title === "dark" ? light : dark)

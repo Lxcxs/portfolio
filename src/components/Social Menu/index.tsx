@@ -10,15 +10,15 @@ function Socials() {
         LINKS
       </Title> */}
       <Navbar>
-        <a href="#inicio">
+        <a href="https://www.linkedin.com/in/lucas-cupertino-8b0637219/" target="_blank">
           <FaLinkedin size={25} />
           LinkedIn
         </a>
-        <a href="#sobremim">
+        <a href="https://github.com/Lxcxs" target="_blank">
           <FaGithubSquare size={25} />
           Github
           </a>
-        <a href="#habilidades">
+        <a href="https://instagram.com/" target="_blank">
           <FaInstagramSquare size={25} />
           Instagram
           </a>

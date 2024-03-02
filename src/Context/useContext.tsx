@@ -6,7 +6,7 @@ type ILang= {
 }
 
 export const LangContext = createContext<ILang>({
-  lang: true,
+  lang: false,
   setLang: () => {}, // Retornando o valor inicial da linguagem
 });
 
