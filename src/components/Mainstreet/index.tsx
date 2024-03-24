@@ -1,4 +1,4 @@
-import AboutMe from "../About Me";
+// import AboutMe from "../About Me";
 import Introduction from "../Introduction";
 import Projects from "../Projects";
 import Skills from "../Skills";
@@ -9,7 +9,7 @@ function Mainstreet() {
   return (
     <Container>
       <Introduction />
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Skills />
       <Projects />
     </Container>

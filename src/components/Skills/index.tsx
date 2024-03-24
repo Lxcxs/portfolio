@@ -1,5 +1,5 @@
 import { SkillContent } from "./styles";
-import { Container, InfoText, Title } from "./styles";
+import { Container } from "./styles";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact, FaSass, FaPython, FaNodeJs, FaGitSquare } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -9,14 +9,6 @@ import { TbBrandVscode, TbBrandReactNative } from "react-icons/tb";
 function Skills() {
   return (
     <Container id="habilidades">
-      <Title>
-        habilidades
-      </Title>
-
-      <InfoText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu aliquet tellus. Duis quis vehicula enim, eget fringilla urna.
-      </InfoText>
-
       <SkillContent>
         <div className="category">
           <h1 id="title">Front-End</h1>

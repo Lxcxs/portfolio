@@ -7,8 +7,9 @@ export default {
     textColor: "#232323",
     primaryReverse: "#e3e3e3",
     project: "#05050517",
-    background: "linear-gradient(to top right, #B6B6B6, #CFC8D8, #DEFBFF)",
+    border: "#585858",
+    background: "linear-gradient(to bottom left, #a8a8a8, #bcc0c4, #dddddd)",
     mainstreetbg: "#0000000a",
-    linkHover: "#000000"
+    linkHover: "#2e365a"
   }
 }

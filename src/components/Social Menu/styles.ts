@@ -14,7 +14,7 @@ export const Navbar = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  bottom: 2em;
+  top: 0;
 
   a {
     color: ${props => props.theme.colors.secondary};

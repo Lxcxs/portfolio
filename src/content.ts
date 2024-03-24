@@ -1,59 +1,66 @@
-
 export const obj = {
-  lang: {
-    "pt-br": "Change Language",
-    "en": "Mudar Linguagem"
-  },
-  menu: {
-    emailBtn: {
-      "pt-br": "Clique para copiar.",
-      "en": "Click to copy."
-    },
-    themeBtn: {
-      light: {
-        "pt-br": "Apague as luzes",
-        "en": "Turn light off"
+  ptbr: {
+    btnLang: "Change Language",
+    menu: {
+      emailBtn: "Clique para copiar.",
+      themeBtn: {
+        light: "Apague as luzes",
+        dark: "Acenda as Luzes",
       },
-      dark: {
-        "pt-br": "Acenda as luzes",
-        "en": "Turn light on"
+      downloadBtn: "Clique para baixar.",
+      home: "Início",
+      about: "Sobre Mim",
+      skill: "Habilidades",
+      projects: "Projetos",
+    },
+    introduce: {
+      title: "Olá, sou Lucas Cupertino",
+      title2: "Desenvolvedor Fullstack",
+      info: "Olá! Sou um desenvolvedor em ascensão, buscando oportunidades para expandir minha jornada profissional. Este é o meu portfólio, onde compartilho alguns projetos que venho desenvolvendo. Estou comprometido em aprimorar minhas habilidades e contribuir de forma significativa para projetos desafiadores. Se algo despertar seu interesse, estou disponível para discutir possíveis colaborações e crescer junto na área de desenvolvimento web. Vamos trabalhar juntos?",
+    },
+    project: {
+      title: "Projetos",
+      subtitle: "Veja alguns dos meus projetos.",
+      link: {
+        url: "checar",
+        repo: "Repositório",
+      },
+      linkto: {
+        t1: "Clique aqui",
+        t2: " para mais"
       }
     },
-    downloadBtn: {
-      "pt-br": "Clique para baixar.",
-      "en": "Click to download"
-    },
-    home: {
-      "pt-br": "Início",
-      "en": "Home"
-    },
-    about: {
-      "pt-br": "Sobre Mim",
-      "en": "About Me",
-    },
-    skill: {
-      "pt-br": "Habilidades",
-      "en": "Skills"
-    },
-    projects: {
-      "pt-br": "Projetos",
-      "en": "Projects"
-    }
-
   },
-  introduce: {
-    title: {
-      "pt-br": "Olá, Bem Vindo(a)",
-      "en": "hi, welcome"
+  en: {
+    btnLang: "Change Language",
+    menu: {
+      emailBtn: "Click to copy.",
+      themeBtn: {
+        light: "Turn the lights off",
+        dark: "Turn the lights on",
+      },
+      downloadBtn: "Click to download.",
+      home: "Home",
+      about: "About Me",
+      skill: "Skills",
+      projects: "Projects",
     },
-    title2: {
-      "pt-br": "este é meu portfólio",
-      "en": "this is my portfolio"
+    introduce: {
+      title: "Hi, i'm Lucas Cupertino",
+      title2: "a brazillian fullstack developer 🚀",
+      info: "Hello! I'm an up-and-coming developer, seeking opportunities to expand my professional journey. This is my portfolio, where I share some projects I've been working on. I'm committed to improving my skills and making meaningful contributions to challenging projects. If anything piques your interest, I'm available to discuss potential collaborations and grow together in the web development field. Let's work together?",
     },
-    info: {
-      "pt-br": "Olá! Sou um desenvolvedor em ascensão, buscando oportunidades para expandir minha jornada profissional. Este é o meu portfólio, onde compartilho alguns projetos que venho desenvolvendo. Estou comprometido em aprimorar minhas habilidades e contribuir de forma significativa para projetos desafiadores. Se algo despertar seu interesse, estou disponível para discutir possíveis colaborações e crescer junto na área de desenvolvimento web. Vamos trabalhar juntos?",
-      "en": "Hello! I'm a budding developer, looking for opportunities to expand my professional journey. This is my portfolio, where I share some projects that I have been developing. I am committed to improving my skills and contributing meaningfully to challenging projects. If something piques your interest, I am available to discuss possible collaborations and grow together in the area of ​​web development. Let's work together?"
+    project: {
+      title: "Projects",
+      subtitle: "See some of my projects.",
+      link: {
+        url: "check",
+        repo: "Repository",
+      },
+      linkto: {
+        t1: "Click here",
+        t2: " for more"
+      }
     },
   },
-
-}
+};

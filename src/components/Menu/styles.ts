@@ -7,7 +7,11 @@ export const Container = styled.section`
   flex-direction: column;
   position: sticky;
   top: 5em;
-`;
+
+  @media screen and (max-width: 1200px){
+    display: none;
+  }
+`
 
 export const Title = styled.h1`
   font-family: "Barlow", sans-serif;
@@ -51,7 +55,7 @@ export const ButtonBox = styled.div`
   flex-direction: column;
   gap: 1.5em;
   position: absolute;
-  bottom: 0;
+  bottom: 1em;
   left: 0;
   a {
     text-decoration: none;
@@ -87,8 +91,8 @@ export const Button = styled.button`
   }
 
   &#toggleTheme:hover {
-    background: ${(props) => props.theme.colors.secondary};
-    border-color: ${(props) => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.linkHover};
+    border-color: ${(props) => props.theme.colors.linkHover};
     color: ${(props) => props.theme.colors.primaryReverse};
   }
 
@@ -119,3 +123,7 @@ export const Button = styled.button`
     left: 10px;
   }
 `;
+
+export const MenuMobile = styled.div`
+
+`

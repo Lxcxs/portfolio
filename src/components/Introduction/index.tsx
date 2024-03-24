@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ImageContent, InfoText, Title } from "./styles";
+import { Container, InfoText, Title } from "./styles";
 import { LangContext } from "../../Context/useContext";
 import { obj } from "../../content";
 
@@ -10,18 +10,18 @@ function Introduction() {
   return (
     <Container id="inicio">
       <Title>
-        {lang ? obj.introduce.title["pt-br"] : obj.introduce.title["en"]}
+        {lang ? obj.ptbr.introduce.title : obj.en.introduce.title}
         <br></br>
-        {lang ? obj.introduce.title2["pt-br"] : obj.introduce.title2["en"]}
+        {lang ? obj.ptbr.introduce.title2: obj.en.introduce.title2}
 
       </Title>
+      {/* <ImageContent>
+        <img src="image/doberman.png" />
+      </ImageContent> */}
       <InfoText>
-      {lang ? obj.introduce.info["pt-br"] : obj.introduce.info["en"]}
+      {lang ? obj.ptbr.introduce.info: obj.en.introduce.info}
       </InfoText>
 
-      <ImageContent>
-        <img src="image/doberman.png" />
-      </ImageContent>
     </Container>
   );
 }

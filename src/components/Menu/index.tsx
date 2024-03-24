@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, ButtonBox, Container, Navbar } from "./styles";
+import { Button, ButtonBox, Container } from "./styles";
 import { ThemeContext } from "styled-components";
 import { MdDarkMode } from "react-icons/md";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import { FaHome, FaInfoCircle  } from "react-icons/fa";
-import { GiSkills } from "react-icons/gi";
-import { AiFillProject } from "react-icons/ai";
+// import { FaHome, FaInfoCircle  } from "react-icons/fa";
+// import { GiSkills } from "react-icons/gi";
+// import { AiFillProject } from "react-icons/ai";
 import { LangContext } from "../../Context/useContext";
 import { obj } from "../../content";
 
@@ -15,32 +15,14 @@ interface MenuProps {
 
 function Menu({ toggleTheme }: MenuProps) {
 
-  const myEmail = 'olucas.cdev@gmail.com';
   const theme = React.useContext(ThemeContext);
-  const [email, setEmail] = React.useState<string>(myEmail)
   const { lang, setLang } = React.useContext(LangContext)
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleEmail = ({ target }: React.MouseEvent<HTMLParagraphElement> | any) => {
-    if (target) {
-      target.classList.add('active');
-      if(lang) {
-        setEmail("Email Copiado!")
-      } else setEmail("Email Copied!")
 
-      navigator.clipboard.writeText(myEmail).then(() => {
-        setTimeout(() => {
-          target.classList.remove('active');
-          setEmail(myEmail)
-
-        }, 2000);
-      }).catch(error => console.error('Erro ao copiar o e-mail:', error));
-    }
-  };
   return (
     <Container>
       {/* <Title>MENU</Title> */}
-      <Navbar>
+      {/* <Navbar>
         <a href="#inicio">
           <FaHome size={25} />
           {lang ? obj.menu.home["pt-br"] : obj.menu.home["en"]}
@@ -60,8 +42,8 @@ function Menu({ toggleTheme }: MenuProps) {
           {lang ? obj.menu.projects["pt-br"] : obj.menu.projects["en"]}
           
         </a>
-      </Navbar>
-      <ButtonBox>
+      </Navbar> */}
+      <ButtonBox style={{top: '1em'}}>
         <Button onClick={() => setLang(!lang)}>
           {lang ? "Change: English " : "Mudar: Português"}
           {/* <FaLanguage size={25} /> */}
@@ -69,29 +51,15 @@ function Menu({ toggleTheme }: MenuProps) {
         </Button>
         <Button onClick={toggleTheme} id="toggleTheme">
           {lang ? (
-            theme?.title === "dark" ? obj.menu.themeBtn.dark["pt-br"] : obj.menu.themeBtn.light["pt-br"]
+            theme?.title === "dark" ? obj.ptbr.menu.themeBtn.dark : obj.ptbr.menu.themeBtn.light
           ) :
             (
-              theme?.title === "light" ? obj.menu.themeBtn.light["en"] : obj.menu.themeBtn.dark["en"]
+              theme?.title === "light" ? obj.en.menu.themeBtn.light : obj.en.menu.themeBtn.dark
             )}
 
           {theme?.title === "dark" ? <HiOutlineLightBulb size={25} /> : <MdDarkMode size={25} />}
         </Button>
 
-        <Button onClick={handleEmail}>
-          {email}
-          <p id="copy">{lang ? obj.menu.emailBtn["pt-br"] : obj.menu.emailBtn["en"]}</p>
-        </Button>
-
-        <a
-          href="../src/assets/LUCASCUPERTINO.pdf"
-          download="Lucas Cupertino"
-        >
-          <Button>
-            {lang ? "Baixar CV" : "Download CV"}
-            <p id="copy">{lang ? obj.menu.downloadBtn["pt-br"] : obj.menu.downloadBtn["en"]}</p>
-          </Button>
-        </a>
       </ButtonBox>
     </Container>
   );
