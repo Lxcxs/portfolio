@@ -6,9 +6,9 @@ export default {
     secondary: "#585858",
     textColor: "#232323",
     primaryReverse: "#e3e3e3",
-    project: "#05050517",
+    project: "#B2AFB7",
     border: "#585858",
-    background: "linear-gradient(to bottom left, #a8a8a8, #bcc0c4, #dddddd)",
+    background: "linear-gradient(to top right, #B6B6B6, #CFC8D8, #DEFBFF)",
     mainstreetbg: "#0000000a",
     linkHover: "#2e365a"
   }

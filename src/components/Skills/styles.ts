@@ -22,21 +22,13 @@ export const InfoText = styled.p`
 export const SkillContent = styled.div`
   padding-top: 2em;
   display: grid;
+  align-content: center;
   grid-template-columns: 1fr 1fr 1fr;
 
   div.category {
+    width: 200px;
+    /* background-color: yellow; */
     position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 2px;
-      height: 90%;
-      background-color: ${(props) => props.theme.colors.project};
-      position: absolute;
-      top: 1em;
-      left: 1px;
-    }
   }
 
   h1#title {
@@ -67,5 +59,16 @@ export const SkillContent = styled.div`
       transform: translateX(2px);
       color: ${(props) => props.theme.colors.linkHover};
     }
+
+    @media screen and (max-width: 730px) {
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2em;
   }
 `;

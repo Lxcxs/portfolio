@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
+interface IMobile {
+  mobile: boolean;
+}
+
 export const Container = styled.section`
-  padding: 1em 10px 0 10px;
+  padding: 1em 10px;
   height: calc(100vh - 5em);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: sticky;
-  top: 5em;
+  top: 0;
+  /* background-color: #ff000033; */
 
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1350px) {
     display: none;
   }
-`
+`;
 
 export const Title = styled.h1`
   font-family: "Barlow", sans-serif;
@@ -19,7 +25,6 @@ export const Title = styled.h1`
   font-weight: 900;
   color: ${(props) => props.theme.colors.primary};
   text-shadow: 0 2px 2px #00000028;
-
 `;
 
 export const Navbar = styled.nav`
@@ -49,16 +54,56 @@ export const Navbar = styled.nav`
 
 export const ButtonBox = styled.div`
   width: 100%;
-  height: auto;
   display: flex;
   padding: 0 10px;
   flex-direction: column;
   gap: 1.5em;
-  position: absolute;
-  bottom: 1em;
-  left: 0;
+
   a {
     text-decoration: none;
+  }
+`;
+
+export const ButtonToggle = styled.button`
+  width: 100%;
+  max-width: 100%;
+  height: 42px;
+  background-color: ${(props) =>
+    props.theme.title === "dark" ? "#ffffff18" : "#00000018"};
+  border-radius: 0.7em;
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.primary};
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  position: relative;
+  font-family: "Inter";
+  padding: 0 7px;
+  border: 1px solid
+    ${(props) => (props.theme.title === "dark" ? "#ffffff1e" : "#00000018")};
+  align-self: flex-end;
+
+  &:hover {
+    background-color: ${(props) =>
+      props.theme.title === "dark" ? "#ffffff28" : "#0000002c"};
+    border: 1px solid
+      ${(props) => (props.theme.title === "dark" ? "#ffffff18" : "#00000018")};
+  }
+
+  svg {
+    color: ${(props) => props.theme.colors.primary};
+    transition: 0.3s;
+  }
+
+  div {
+    width: fit-content;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* transform: translateX(1em); */
+    transition: 0.3s;
   }
 `;
 
@@ -71,7 +116,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  color: ${(props) => props.theme.colors.textColor};
+  color: ${(props) => props.theme.colors.primary};
   background: transparent;
   border-radius: 5px;
   font-family: "Inter";
@@ -80,7 +125,6 @@ export const Button = styled.button`
   position: relative;
   transform: translateY(-10px);
   box-shadow: 0 2px 2px #0000003b;
-
   transition: 0.3s;
 
   &:hover,
@@ -124,6 +168,47 @@ export const Button = styled.button`
   }
 `;
 
-export const MenuMobile = styled.div`
+export const MenuMobile = styled.div<IMobile>`
+  width: 300px;
+  height: ${(props) => (props.mobile ? "auto" : "50px")};
+  padding: 0.5em 0;
+  position: fixed;
+  top: 10vh;
+  left: ${(props) => (props.mobile ? "0px" : "-250px")};
+  background: ${(props) => props.theme.colors.project};
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  z-index: 1000;
+  display: none;
+  transition: 1s;
 
-`
+  .btnMobile {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      color: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  .content {
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    opacity: ${(props) => (props.mobile ? "1" : "0")};
+    transition: .2s;
+  }
+  @media screen and (max-width: 1350px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+`;

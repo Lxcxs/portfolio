@@ -76,17 +76,6 @@ function Projects() {
 
                 </div>
                 <ProjectText>{item.description || "Este projeto não possui descrição."}</ProjectText>
-                {/* <LinkContent>
-                  {item.homepage &&
-                    <Link href={item.homepage} target="_blank">
-                      {lang ? obj.ptbr.project.link.url : obj.en.project.link.url}
-                      <MdOutlineSubdirectoryArrowLeft />
-                    </Link>}
-                  <Link href={item.html_url} target="_blank">
-                    {lang ? obj.ptbr.project.link.repo : obj.en.project.link.repo}
-                    <AiFillFolderOpen />
-                  </Link>
-                </LinkContent> */}
               </ProjectInfo>
               <Banner></Banner>
             </Project>

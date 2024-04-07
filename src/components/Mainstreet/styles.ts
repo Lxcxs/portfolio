@@ -6,8 +6,13 @@ export const Container = styled.section`
   gap: 3em;
   flex-direction: column;
   padding: 1em 0;
-  /* background: ${p => p.theme.colors.mainstreetbg}; */
-  backdrop-filter: blur(10px);
   border-radius: 7px;
   overflow: hidden;
+
+  @media screen and (max-width: 1350px){
+    padding: 1em 2em; 
+  }
+  @media screen and (max-width: 680px){
+    padding: 1em .7em;
+  }
 `

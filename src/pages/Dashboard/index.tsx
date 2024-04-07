@@ -1,7 +1,6 @@
 // import React from "react";
 import { Container, Content } from "./styles";
 import Menu from "../../components/Menu";
-import Socials from "../../components/Social Menu";
 import Mainstreet from "../../components/Mainstreet";
 import { ThemeProvider } from "styled-components";
 import dark from "../../themes/dark";
@@ -22,9 +21,10 @@ function Dashboard() {
     <ThemeProvider theme={theme}>
       <Container>
         <Content>
+
           <Menu toggleTheme={toggleTheme} />
+
           <Mainstreet />
-          <Socials />
 
         </Content>
       </Container>

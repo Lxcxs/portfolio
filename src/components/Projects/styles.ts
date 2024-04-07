@@ -64,6 +64,11 @@ export const Project = styled.div`
   grid-template-columns: 2fr 1fr;
   /* gap: 0.75rem; */
   overflow: hidden;
+
+  @media screen and (max-width: 680px){
+    grid-template-columns: 1fr;
+    max-height: auto;
+  }
 `;
 
 export const Banner = styled.div`
@@ -74,6 +79,9 @@ export const Banner = styled.div`
     no-repeat;
   background-size: cover;
   /* gap: 0.75rem; */
+  @media screen and (max-width: 680px){
+    display: none;
+  }
 `;
 
 export const ProjectInfo = styled.div`
@@ -123,6 +131,10 @@ export const Subtitle = styled.a`
     color: ${(props) => props.theme.colors.linkHover};
     text-decoration: underline;
     transition: 0.1s;
+  }
+
+  @media screen and (max-width: 680px){
+    font-size: 20px;
   }
 `;
 
