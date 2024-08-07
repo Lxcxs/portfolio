@@ -8,7 +8,7 @@ import { MdClose } from "react-icons/md";
 // import { FaHome, FaInfoCircle  } from "react-icons/fa";
 // import { GiSkills } from "react-icons/gi";
 // import { AiFillProject } from "react-icons/ai";
-import { LangContext } from "../../Context/useContext";
+// import { LangContext } from "../../Context/useContext";
 import { obj } from "../../content";
 
 
@@ -17,7 +17,7 @@ function Menu() {
   const myEmail = 'olucas.cdev@gmail.com';
   const [email, setEmail] = React.useState<string>(myEmail)
   const [mobile, setMobile] = React.useState<boolean>(false)
-  const { lang, setLang } = React.useContext(LangContext)
+  const lang = false;
   // const theme = React.useContext(ThemeContext);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
