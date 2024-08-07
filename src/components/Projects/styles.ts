@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 100%;
-  padding-bottom: 2em;
+  width: 800px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   border-radius: 0.75rem;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`
-  font-family: "Barlow", sans-serif;
   font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
@@ -23,7 +25,7 @@ export const Title = styled.h1`
 
 export const InfoText = styled.p`
   color: ${(props) => props.theme.colors.textColor};
-  font-family: "Inter";
+
   padding-bottom: 2em;
   text-align: center;
   width: 100%;
@@ -31,18 +33,18 @@ export const InfoText = styled.p`
 
 export const ProjectContent = styled.div`
   width: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 0.7em;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   position: relative;
   overflow: hidden;
 
   #more {
     width: 100%;
     text-align: center;
-    font-family: "Inter";
+
     font-size: 14px;
     color: ${(props) => props.theme.colors.primary};
   }
@@ -52,8 +54,8 @@ export const ProjectContent = styled.div`
 `;
 
 export const Project = styled.div`
-  margin: 0 auto;
-  width: 100%;
+  width: 800px;
+  min-width: 350px;
   min-height: 150px;
   max-height: 200px;
   padding: 0;
@@ -64,10 +66,16 @@ export const Project = styled.div`
   grid-template-columns: 2fr 1fr;
   /* gap: 0.75rem; */
   overflow: hidden;
-
-  @media screen and (max-width: 680px){
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
     max-height: auto;
+  }
+  @media screen and (max-width: 530px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -79,7 +87,10 @@ export const Banner = styled.div`
     no-repeat;
   background-size: cover;
   /* gap: 0.75rem; */
-  @media screen and (max-width: 680px){
+  /* @media screen and (max-width: 680px){
+    display: none;
+  } */
+  @media screen and (max-width: 530px) {
     display: none;
   }
 `;
@@ -106,7 +117,7 @@ export const ProjectInfo = styled.div`
       align-self: flex-start;
       align-items: center;
       text-transform: lowercase;
-      gap: .1em;
+      gap: 0.1em;
       font-size: 14px;
       font-weight: 400;
       color: ${(props) => props.theme.colors.primary};
@@ -116,7 +127,7 @@ export const ProjectInfo = styled.div`
 
 export const ProjectText = styled.p`
   color: ${(props) => props.theme.colors.textColor};
-  font-family: "Inter";
+
   font-size: 13px;
 `;
 
@@ -126,14 +137,15 @@ export const Subtitle = styled.a`
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-decoration: none;
-
+  width: fit-content;
+  
   &:hover {
     color: ${(props) => props.theme.colors.linkHover};
     text-decoration: underline;
     transition: 0.1s;
   }
 
-  @media screen and (max-width: 680px){
+  @media screen and (max-width: 680px) {
     font-size: 20px;
   }
 `;
@@ -144,7 +156,7 @@ export const SkillInfo = styled.div`
   gap: 0.5em;
   p {
     color: #000;
-    font-family: "Inter";
+
     font-size: 13px;
     background-color: white;
     padding: 2px 5px;

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Banner, Container, InfoText, Project, ProjectContent, ProjectInfo, ProjectText, SkillInfo, Subtitle, Title } from "./styles";
+import { Banner, Container, Project, ProjectContent, ProjectInfo, ProjectText, SkillInfo, Subtitle } from "./styles";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Loader from "../Loader";
 import { obj } from "../../content";
 import { LangContext } from "../../Context/useContext";
 import { HiExternalLink } from "react-icons/hi";
+import { BiLink } from "react-icons/bi";
 // import { MdOutlineSubdirectoryArrowLeft } from "react-icons/md";
 // import { AiFillFolderOpen } from "react-icons/ai";
 // import { obj } from "../../content";
@@ -24,7 +25,7 @@ function Projects() {
   const [loader, setLoader] = useState<boolean>(false)
   const { lang } = React.useContext(LangContext)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const reposName = ["animais-fantasticos", 'Dogs', 'Github-user-search', "appreview"];
+  const reposName = ["animais-fantasticos", 'Dogs', 'Github-user-search', "appreview", "comandaFacil", "Lista-de-Tarefas"];
 
   async function getUser() {
     try {
@@ -34,7 +35,6 @@ function Projects() {
       const json = await response.json();
       setData(json);
       setLoader(false)
-      console.log(json)
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -47,12 +47,12 @@ function Projects() {
   useEffect(() => {
     const filteredProjects = data.filter((item) => reposName.includes(item.name));
     setProjects(filteredProjects);
-  }, [data]);
+  }, [data, reposName]);
 
   return (
     <Container id="projetos">
-      <Title>{lang ? obj.ptbr.project.title : obj.en.project.title}</Title>
-      <InfoText>{lang ? obj.ptbr.project.subtitle : obj.en.project.subtitle}</InfoText>
+      {/* <Title>{lang ? obj.ptbr.project.title : obj.en.project.title}</Title>
+      <InfoText>{lang ? obj.ptbr.project.subtitle : obj.en.project.subtitle}</InfoText> */}
 
       <ProjectContent id="slide">
         {loader ? (
@@ -66,7 +66,7 @@ function Projects() {
                 </SkillInfo>
                 <div className="linkto">
                   <Subtitle href={item.html_url} target="_blank">
-                    {item.name}
+                      <p>{item.name} <BiLink size={15} /></p>
                   </Subtitle>
                   {item.homepage &&
                     <Subtitle id="linkto" href={item.homepage} target="_blank">
@@ -75,7 +75,7 @@ function Projects() {
                     </Subtitle>}
 
                 </div>
-                <ProjectText>{item.description || "Este projeto não possui descrição."}</ProjectText>
+                <ProjectText>{item.description || "This project has no description."}</ProjectText>
               </ProjectInfo>
               <Banner></Banner>
             </Project>

@@ -5,14 +5,13 @@ interface IMobile {
 }
 
 export const Container = styled.section`
-  padding: 1em 10px;
-  height: calc(100vh - 5em);
+  width: auto;
+  padding: 0;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  /* background-color: #ff000033; */
+  /* align-items: center; */
+  /* justify-content: flex-end; */
 
   @media screen and (max-width: 1350px) {
     display: none;
@@ -36,7 +35,7 @@ export const Navbar = styled.nav`
 
   a {
     color: ${(props) => props.theme.colors.secondary};
-    font-family: "Inter";
+
     padding: 15px 5px;
     text-decoration: none;
     display: flex;
@@ -55,19 +54,22 @@ export const Navbar = styled.nav`
 export const ButtonBox = styled.div`
   width: 100%;
   display: flex;
-  padding: 0 10px;
+  padding: 1em 10px;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 2em;
 
   a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 1350px) {
+    padding-top: 1em;
   }
 `;
 
 export const ButtonToggle = styled.button`
   width: 100%;
   max-width: 100%;
-  height: 42px;
+  height: auto;
   background-color: ${(props) =>
     props.theme.title === "dark" ? "#ffffff18" : "#00000018"};
   border-radius: 0.7em;
@@ -76,10 +78,11 @@ export const ButtonToggle = styled.button`
   transition: 0.3s;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-weight: bold;
   position: relative;
-  font-family: "Inter";
+  gap: 1em;
+
   padding: 0 7px;
   border: 1px solid
     ${(props) => (props.theme.title === "dark" ? "#ffffff1e" : "#00000018")};
@@ -105,13 +108,14 @@ export const ButtonToggle = styled.button`
     /* transform: translateX(1em); */
     transition: 0.3s;
   }
+
 `;
 
 export const Button = styled.button`
   cursor: pointer;
-  width: 100%;
+  width: 250px;
   border: 1px solid ${(props) => props.theme.colors.textColor};
-  padding: 10px 0;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +123,7 @@ export const Button = styled.button`
   color: ${(props) => props.theme.colors.primary};
   background: transparent;
   border-radius: 5px;
-  font-family: "Inter";
+
   font-size: 1em;
   font-weight: 500;
   position: relative;
@@ -166,25 +170,26 @@ export const Button = styled.button`
     top: -12px;
     left: 10px;
   }
+  @media screen and (max-width: 1350px) {
+    width: 100%;
+  }
 `;
 
 export const MenuMobile = styled.div<IMobile>`
-  width: 300px;
+  width: 100%;
   height: ${(props) => (props.mobile ? "auto" : "50px")};
   padding: 0.5em 0;
   position: fixed;
-  top: 10vh;
-  left: ${(props) => (props.mobile ? "0px" : "-250px")};
+  bottom: 0;
+  left: 0;
   background: ${(props) => props.theme.colors.project};
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
   border: 1px solid ${(props) => props.theme.colors.border};
   z-index: 1000;
   display: none;
   transition: 1s;
 
   .btnMobile {
-    width: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,14 +202,13 @@ export const MenuMobile = styled.div<IMobile>`
 
   .content {
     width: 100%;
-    padding-right: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2em;
     opacity: ${(props) => (props.mobile ? "1" : "0")};
-    transition: .2s;
+    transition: 0.2s;
   }
   @media screen and (max-width: 1350px) {
     display: flex;

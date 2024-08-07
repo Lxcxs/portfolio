@@ -1,17 +1,22 @@
 // import AboutMe from "../About Me";
-import Introduction from "../Introduction";
+import React from "react";
+// import dark from "../../themes/dark";
+// import light from "../../themes/light";
+import Menu from "../Menu";
 import Projects from "../Projects";
 import Skills from "../Skills";
 import { Container } from "./styles";
 
 
 function Mainstreet() {
+
   return (
     <Container>
-      <Introduction />
+      {/* <Introduction /> */}
       {/* <AboutMe /> */}
-      <Skills />
+      <Menu />
       <Projects />
+      <Skills />
     </Container>
   );
 }

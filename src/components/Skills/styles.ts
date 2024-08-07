@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 100%;
+  width: auto;
   height: 100%;
 `;
 
 export const Title = styled.h1`
-  font-family: "Barlow", sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 800;
@@ -20,36 +19,37 @@ export const InfoText = styled.p`
 `;
 
 export const SkillContent = styled.div`
-  padding-top: 2em;
   display: grid;
   align-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 
   div.category {
     width: 200px;
     /* background-color: yellow; */
     position: relative;
+    text-align: left;
   }
 
   h1#title {
     cursor: pointer;
     color: ${(props) => props.theme.colors.primary};
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: "Barlow", sans-serif;
     font-size: 1.2em;
     text-shadow: 0 2px 2px #00000028;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   p {
     cursor: default;
-    padding-left: 1.2em;
+    padding-left: 1em;
     color: ${(props) => props.theme.colors.textColor};
     line-height: 3em;
-    font-family: "Inter";
     font-size: 1em;
     text-transform: capitalize;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
     align-items: center;
     gap: 5px;
     transition: 0.3s;
@@ -59,16 +59,10 @@ export const SkillContent = styled.div`
       transform: translateX(2px);
       color: ${(props) => props.theme.colors.linkHover};
     }
-
-    @media screen and (max-width: 730px) {
-      padding-left: 0;
-    }
   }
 
-  @media screen and (max-width: 730px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 2em;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-between;
   }
 `;

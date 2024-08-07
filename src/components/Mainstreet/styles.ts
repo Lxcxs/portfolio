@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
+  height: 100%;
   display: flex;
-  gap: 3em;
-  flex-direction: column;
-  padding: 1em 0;
+  gap: 1em;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5em;
   border-radius: 7px;
-  overflow: hidden;
 
-  @media screen and (max-width: 1350px){
-    padding: 1em 2em; 
+  @media screen and (max-width: 1350px) {
+    padding: 1em 2em;
   }
-  @media screen and (max-width: 680px){
-    padding: 1em .7em;
+  @media screen and (max-width: 900px) {
+    padding: 1em 0.7em;
+    flex-direction: column;
   }
-`
+`;
