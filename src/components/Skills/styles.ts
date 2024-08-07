@@ -62,7 +62,8 @@ export const SkillContent = styled.div`
   }
 
   @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 `;
