@@ -25,7 +25,7 @@ function Projects() {
   const [loader, setLoader] = useState<boolean>(false)
   const { lang } = React.useContext(LangContext)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const reposName = ["animais-fantasticos", 'Dogs', 'Github-user-search', "appreview", "comandaFacil", "Lista-de-Tarefas"];
+  const reposName = ["animais-fantasticos", 'Dogs', 'Github-user-search', "appreview", "comandaFacil", "Lista-de-Tarefas", "ts-data-practice", "slide-stories"];
 
   async function getUser() {
     try {
